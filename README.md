@@ -1,9 +1,6 @@
 # AI-Powered Text Summarizer & Keyword Extractor | LLM + NLP Project  
 
-[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)  
-[![Transformers](https://img.shields.io/badge/HuggingFace-Transformers-yellow.svg)](https://huggingface.co/transformers/)  
-[![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange.svg)](https://scikit-learn.org/)  
-[![NLTK](https://img.shields.io/badge/NLTK-NLP-green.svg)](https://www.nltk.org/)  
+[![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)[![Transformers](https://img.shields.io/badge/HuggingFace-Transformers-yellow.svg)](https://huggingface.co/transformers/)[![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-orange.svg)](https://scikit-learn.org/)[![NLTK](https://img.shields.io/badge/NLTK-NLP-green.svg)](https://www.nltk.org/)  
 
 > A **deep learning + NLP project** that uses **LLMs (BART/DistilBART)** for **text summarization**, combined with **TF-IDF & POS tagging** for keyword extraction and topic modeling.  
 > This project demonstrates how to build **AI-powered applications** with **real-world NLP pipelines**. 
@@ -24,7 +21,7 @@ It showcases the integration of **transformer-based models** with classical NLP,
 
 ## Features
 
-- Summarizes text into **short, medium, long, or auto** mode.  
+- Summarizes text into **short, medium, long** mode.  
 - Extracts top **keywords & topics** using hybrid techniques.  
 - Provides detailed **text statistics**. 
 
