@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Text Summarizer</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>AI Text Summarizer</h1>
+        <form method="POST">
+            <label for="input_text">Enter Text:</label>
+            <textarea name="input_text" required>{{ request.form.input_text }}</textarea>
+
+            <label for="summary_length">Summary Length:</label>
+            <select name="summary_length">
+                <option value="short" {% if request.form.summary_length == "short" %}selected{% endif %}>Short</option>
+                <option value="medium" {% if request.form.summary_length == "medium" %}selected{% endif %}>Medium</option>
+                <option value="long" {% if request.form.summary_length == "long" %}selected{% endif %}>Long</option>
+            </select>
+
+            <button type="submit">Summarize</button>
+        </form>
+
+        {% if result %}
+        <div class="result">
+            <h2>Summary:</h2>
+            <p>{{ result.summary.summary }}</p>
+
+            <h3>Keywords:</h3>
+            <p>{{ result.keywords | join(', ') }}</p>
+
+            <h3>Topics:</h3>
+            <p>{{ result.topics | join(', ') }}</p>
+
+            <div class="meta">
+                <p>Words: {{ result.original_text_stats.word_count }} | 
+                   Sentences: {{ result.original_text_stats.sentence_count }} | 
+                   Characters: {{ result.original_text_stats.character_count }}</p>
+                <p>Analysis completed at: {{ result.analysis_timestamp }}</p>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
